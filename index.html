@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    Hola món! Mira la consola
+
+<script>
+    "use strict";
+
+
+
+    var Mymodule=(function()
+    {
+        var stateObj = {foo: "bar"};
+
+        var privateMethod=function()
+        {
+           console.log('publicMethod')
+
+
+
+        };
+        return{
+            myPublicProperty: "PropietatPublica",
+            publicMethodOne: function(){
+                console.log('publicMethodOne')
+
+            },
+
+
+
+        publicMethodTwo: function () {
+            console.log('publicMethodTwo')
+        }
+
+
+
+
+    };
+    console.debug(stateObj);
+
+    }());
+
+    history.pushState(stateObj, "Bar", "bar.html");
+
+    var stateObj1 = { };
+    history.pushState(stateObj1, "Bar2", "bar2.html");
+
+</script>
+</body>
+</html>
